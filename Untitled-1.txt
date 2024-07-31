@@ -1,0 +1,21 @@
+// Fetch products from the server
+async function fetchProducts() {
+    try {
+      const response = await fetch('/api/products');
+      const data = await response.json();
+
+      const productsContainer = document.getElementById('products');
+      productsContainer.innerHTML = data.products.map(product => `
+        <div class="product">
+          <h2>${product.name}</h2>
+          <p>${product.description}</p>
+          <p>Price: $${product.price}</p>
+        </div>
+      `).join('');
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  }
+
+  // Call the function to fetch products
+  fetchProducts();
