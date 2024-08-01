@@ -1,51 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ShopLocalNG</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+      .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 40px;
+        border-radius: 5px;
+      }
+      .product img {
+        max-width: 100px;
+        height: 100px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      #loading {
+      display: none;
+      font-size: 20px;
+      text-align: center;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
-    <div class="logo"> <img src="istockphoto-875699972-612x612.jpg" alt="NaijaShoppingHub Logo"> </div>
+  <body>
+    <div id="data-container"></div>
+    <div class="logo">
+      <img
+        src="istockphoto-875699972-612x612.jpg"
+        alt="NaijaShoppingHub Logo"
+      />
+    </div>
     <header>
-        <h1>ShopLocalNG</h1>
-        <nav> <a href="#products">Products</a> <a href="#cart">Cart</a> <a href="#login">Login</a> <a
-                href="#signup">Sign Up</a> </nav>
+      <h1>ShopLocalNG</h1>
+      <nav>
+        <a href="#products">Products</a> <a href="#cart">Cart</a>
+        <a href="#login">Login</a> <a href="#signup">Sign Up</a>
+      </nav>
     </header>
-    <main> <!-- Search Section -->
-        <section id="search"> <input type="text" id="search-input" placeholder="Search for products..."> <button
-                id="search-button">Search</button> </section> <!-- Products Section -->
-        <section id="products">
-            <h2>Available Products</h2>
-            <div id="product-list" class="product-list"> <!-- Products will be dynamically inserted here --> </div>
-        </section> <!-- Cart Section -->
-        <section id="cart">
-            <h2>Your Cart</h2>
-            <div id="cart-list"> <!-- Cart items will be dynamically inserted here --> </div> <button
-                id="checkout-button">Checkout</button>
-        </section> <!-- Login Section -->
-        <section id="login">
-            <h2>Login</h2>
-            <form id="login-form"> <label for="login-email">Email:</label> <input type="email" id="login-email"
-                    name="email" required> <label for="login-password">Password:</label> <input type="password"
-                    id="login-password" name="password" required> <button type="submit">Login</button> </form>
-        </section> <!-- Sign Up Section -->
-        <section id="signup">
-            <h2>Sign Up</h2>
-            <form id="signup-form"> <label for="signup-name">Name:</label> <input type="text" id="signup-name"
-                    name="name" required> <label for="signup-email">Email:</label> <input type="email" id="signup-email"
-                    name="email" required> <label for="signup-password">Password:</label> <input type="password"
-                    id="signup-password" name="password" required> <button type="submit">Sign Up</button> </form>
-        </section>
+    <main>
+      <!-- Search Section -->
+      <section id="search">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for products..."
+        />
+        <button id="search-button">Search</button>
+      </section>
+      <!-- Products Section -->
+      <section id="products">
+        <h2>Available Products</h2>
+        <div id="loading">Adaeze is a fine girl....</div>
+        <div id="product-list" class="product-list">
+          <!-- Products will be dynamically inserted here -->
+        </div>
+      </section>
+      <!-- Cart Section -->
+      <!-- <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-list">
+   
+        </div>
+        <button id="checkout-button">Checkout</button>
+      </section> -->
+      <!-- Login Section -->
+      <!-- <section id="login">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" name="email" required />
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="password" required />
+          <button type="submit">Login</button>
+        </form>
+      </section> -->
+      <!-- Sign Up Section -->
+      <!-- <section id="signup">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <label for="signup-name">Name:</label>
+          <input type="text" id="signup-name" name="name" required />
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" name="email" required />
+          <label for="signup-password">Password:</label>
+          <input
+            type="password"
+            id="signup-password"
+            name="password"
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+      </section> -->
     </main>
     <footer>
-        <p>&copy; 2024 NaijaShoppingHub. All rights reserved.</p>
+      <p>&copy; 2024 NaijaShoppingHub. All rights reserved.</p>
     </footer>
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>
